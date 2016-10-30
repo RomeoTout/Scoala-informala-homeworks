@@ -42,6 +42,7 @@ public class SalesTeamReader extends BufferedReader {
 			txtLine = readLine();
 		}
 		if (managerCounter != 1) {
+			// TODO CODE REVIEW: Why not use an Exception?
 			System.err.println(error);
 		}
 		return employees;
