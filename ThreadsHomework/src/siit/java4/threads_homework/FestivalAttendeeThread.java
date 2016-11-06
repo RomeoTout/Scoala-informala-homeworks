@@ -3,20 +3,21 @@ package siit.java4.threads_homework;
 import java.util.Queue;
 
 /**
- * @author Reo55
- * packageQueue=the list to store the ticket-data
- * ticketType=ticket-data
- * fullCounter=FULL ticket type
- * fulVipCounter=FULL_VIP ticket type
- * freePassCounter=FREE_PASS ticket type
- * oneDayCounter=ONE_DAY ticket type
- * oneDayVipCounter=ONE_DAY_VIP ticket type
+ * @author Reo55 packageQueue=the list to store the ticket-data
+ *         ticketType=ticket-data fullCounter=FULL ticket type
+ *         fulVipCounter=FULL_VIP ticket type freePassCounter=FREE_PASS ticket
+ *         type oneDayCounter=ONE_DAY ticket type oneDayVipCounter=ONE_DAY_VIP
+ *         ticket type
  */
 public class FestivalAttendeeThread extends Thread {
 
 	private Queue<String> packageQueue;
 	private TicketType ticketType;
 	private FestivalGate gate;
+
+	// TODO CODE REVIEW: Why are you keeping statistics info in the Attendee
+	// Thread's context? If you really want to use statics, at least keep them
+	// in the stats Thread.
 	static int fullCounter = 0;
 	static int fulVipCounter = 0;
 	static int freePassCounter = 0;
@@ -28,6 +29,7 @@ public class FestivalAttendeeThread extends Thread {
 		this.packageQueue = packageQueue;
 		this.gate = gate;
 	}
+
 	/**
 	 * adds ticket type to queue and notifies the next thread
 	 */
@@ -47,8 +49,10 @@ public class FestivalAttendeeThread extends Thread {
 
 		}
 	}
+
 	/**
-	 * creates a specific number of atendee threads and counts every type of ticket that entered
+	 * creates a specific number of atendee threads and counts every type of
+	 * ticket that entered
 	 */
 	public void generateAtendeeThreads(int numberOfAttendees) {
 		for (int i = 0; i < numberOfAttendees; i++) {

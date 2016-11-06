@@ -15,6 +15,7 @@ public class Main {
 
 		TicketType ticketType;
 
+		// TODO CODE REVIEW: you could have used just new FestivalAttendeeThread(TicketType.randomTicketType(), 4gate, queue); 
 		FestivalAttendeeThread festivalAttendee = new FestivalAttendeeThread(ticketType = TicketType.randomTicketType(),
 				gate, queue);
 
