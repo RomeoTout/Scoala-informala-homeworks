@@ -1,0 +1,23 @@
+body{
+	background: #339933;
+	font-family: arial;
+	border-style: dotted;
+	font-family: aqua;
+}
+H1{margin: auto}
+a {color:#201359; /*new colour*/}
+a span {color:#aaaaaa; /*originalcolour*/}
+.mainsection{color:#111111; text-align:right;background:4E7236}
+H3{text-align: left}
+H4{text-align: left}
+.neighborhoods{background-color:550B0E}
+.villages{background-color:1AE8F3}
+.container{
+	width:1100px;
+	background-color: lightblue;
+	margin: 50px auto;
+	}
+	input[type=text]:hover{
+	background-color: #EFE;
+	padding-bottom: 50px;
+	}

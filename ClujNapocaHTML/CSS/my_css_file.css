@@ -1,0 +1,10 @@
+body{
+	background: #339933;
+	font-family: arial;
+}
+H1{margin: auto}
+a {color:#201359; /*new colour*/}
+a span {color:#aaaaaa; /*originalcolour*/}
+.mainsection{color:#111111; text-align:right;background:4E7236}
+H3{text-align: left}
+H4{text-align: left}
