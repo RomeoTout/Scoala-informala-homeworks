@@ -19,6 +19,16 @@ public class SalaryCalculator {
 		for (int i = 0; i < employees.size(); i++) {
 			managerBonus = managerBonus + employees.get(i).prepaidSales * 15 + employees.get(i).postpaidSales * 30;
 		}
+		/* TODO CODE REVIEW: This methd is a bit large and could be refactored.
+		 * if(isSeniorSalesOfficer(employees.get(i)){
+		 * 	 computeSeniorSalesOfficerSalary();
+		 * } else if(isSalesOfficer(employees.get(i)){
+		 *  // extracted method
+		 * } else if(isDalesManager(employees.get(i)){
+		 * // extracted method
+		 * }
+		 *  
+		 */
 		for (int i = 0; i < employees.size(); i++) {
 			if (employees.get(i).jobPosition.equals("Senior Sales Officer")) {
 				salary = employees.get(i).workedHours * 20 + employees.get(i).daysOff * 8 * 20;

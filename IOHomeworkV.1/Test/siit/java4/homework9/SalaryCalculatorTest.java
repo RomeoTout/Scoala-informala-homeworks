@@ -14,6 +14,10 @@ public class SalaryCalculatorTest {
 	@Test
 	public void salaryCalculatorTotalSalaryTest() throws IOException {
 		// Given
+		// TODO CODE REVIEW: For faster tests, and decoupling from the
+		// file-sistem, you could have used a StringReader backed by a String
+		// that contains the same data as the txt. This way it's much easier to
+		// write a lot of different test cases as well.
 		File salesFile = new File("sales-team.txt");
 		SalesTeamReader salesReader = new SalesTeamReader(new FileReader(salesFile));
 		SalaryCalculator calculator = new SalaryCalculator();
@@ -51,6 +55,7 @@ public class SalaryCalculatorTest {
 		SalaryCalculator calculator = new SalaryCalculator();
 		// When
 		salesReader.readSalesTeam();
+		// TODO CODE REVIEW: Avoid exposing encapsulated class members. Use some kind of access method to them (i.e getter). In this scenario someone can change the value of calculator.bonus easily).
 		calculator.calculateSalary(salesReader.employees);
 		int actual = calculator.bonus;
 		int expected = 175;

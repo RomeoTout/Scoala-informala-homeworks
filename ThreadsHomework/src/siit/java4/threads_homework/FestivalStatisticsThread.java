@@ -6,8 +6,10 @@ import java.util.Queue;
  * packageQueue=the list to store the ticket-data
  */
 public class FestivalStatisticsThread extends Thread {
+	// TODO CODE REVIEW: If it's a list for storing ticket-data, why is it called packageQueue?
 	private Queue<String> packageQueue;
 
+	// TODO CODE REVIEW: FestivalGate is never used in the class. Remove it.
 	public FestivalStatisticsThread(FestivalGate gate, Queue<String> packageQueue) {
 		this.packageQueue = packageQueue;
 	}
